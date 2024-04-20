@@ -1,6 +1,6 @@
-# HabitatHero
-
 ![Marvel](flask_app/app/static/images/wildlife.jpeg "Wildlife")
+
+# HabitatHero
 
 ## Purpose
 
