@@ -1,0 +1,84 @@
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .upload-form {
+            margin-bottom: 20px;
+        }
+        .submit-button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-background">
+        <div class="container">
+            <h1>Habitat Hero!</h1>
+        </div>
+    </header>
+    <div class="upload-form">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="file-upload-container"> 
+                <input type="file" name="image" required>
+                <input type="submit" value="Upload" class="submit-button">
+            </div>
+        </form>
+    </div>
+    <div class="horizontal-info-boxes">
+        <div class="about-box">
+            <h2>Instructions for Application</h2>
+            1. Upload an image of a wildlife animal using the "Choose File" button. This can either be a single animal or a group of animals.<br>
+            2. Click the "Upload" button to submit the image.<br>
+            3. You will be redirected to another page where the application will display the name(s) of the detected animal(s) in the image as well as the original image with bounding boxes around the animals in the image.<br>
+            4. Click on the name of a detected animal to garner more general information about the animal as well as its endangered status.<br>
+            5. Ask the chatbot questions to learn more about the animal, its habitat, conservation status, and ways we as humans can help.
+            <br><br>
+            <h2>Methodologies Used</h2>
+            1. The application uses a fine-tuned YOLOv5 object detection model to detect wildlife animals in images that the user uploads.<br>
+            2. Relevant chunks of information regarding the detected animals are extracted from the MongoDB Atlas database for RAG purposes and prompt-engineering.<br>
+            3. The relevant chunks are then passed as context to OpenAI's GPT-3.5 Turbo to generate information to the user regarding the animal of focus.<br>
+        </div>
+        <div class="purpose-box">
+            <h2>Purpose</h2>
+            On a global level, there are unfortunately many commonly known species such as elephants, rhinos, gorillas, etc. that are now 
+            endangered and face extinction due to a lack of public awareness and conservation engagement. Although there are tools in place to 
+            help mitigate the chance of extinction of these endangered species, there is a severe lack of educational tools that give the public a 
+            broader understanding of the problem as well as potential solutions. This project helps bridge this gap by allowing the public to learn 
+            more about a wide variety of wild-life animals and potential ways we as humans can help animals around the world thrive. 
+            The wildlife animals that the model primarily focuses on are: antelope, bat, bear, bee, butterfly, Domestic short-haired cats, chimpanzee, 
+            coyote, dolphin, eagle, elephant, gorilla, hippopotamus, rhinoceros, hummingbird, kangaroo, koala, leopard, lion, lizard, orangutan, panda,
+            penguin, seal, shark, tiger, turtle, whale, and zebra. <br><br>
+            The concept of using computer vision to identify or classify animals is not inherently novel. There have been research papers in the past 
+            that have attempted to utilize computer vision for animal detection. For example, “The iNaturalist Species Classification and Detection Dataset”
+            by Grant Van Horn et al. is a groundbreaking research paper that focuses on classification of different species via a large dataset of animals.
+            Feel free to check out the paper to learn more about interesting CV methods being used in the field of wildlife conservation.
+        </div>
+        <div class="resources-box">
+            <h2>Additional Resources</h2>
+            Here are some additional resources that can be used to learn more about wildlife conservation and how you can help:<br><br>
+            World Wildlife Fund: "WWF works to help local communities conserve the natural resources they depend upon; transform markets and policies toward sustainability; and protect and restore species and their habitats. Our efforts ensure that the value of nature is reflected in decision-making from a local to a global scale.
+            WWF connects cutting-edge conservation science with the collective power of our partners in the field, more than one million supporters in the United States and five million globally, as well as partnerships with communities, companies, and governments. Today, human activities put more pressure on nature than ever before, but it’s also people who have the power to change this trajectory. Together, we can address the greatest threats to life on this planet and protect the natural resources that sustain and inspire us.
+            Our goal - Recognizing that the problems facing our planet are increasingly more complex and urgent, WWF focuses its work on six ambitious goals. Through this integrative approach, we can challenge the planet’s greatest threats and ensure a healthy future for people and nature."<br><br>
+            Website: https://www.worldwildlife.org<br><br>
+            National Wildlife Federation: "The National Wildlife Federation, America's largest and most trusted conservation organization, works across the country to unite Americans from all walks of life in giving wildlife a voice. We've been on the front lines for wildlife since 1936, fighting for the conservation values that are woven into the fabric of our nation's collective heritage.
+            Our strategic plan sets in motion a Common Agenda for Wildlife to increase America's fish and wildlife populations and enhance their capability to thrive in a rapidly changing world."<br><br>
+            Websites: https://www.nwf.org
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <p>Sriramteja Veerisetti - Deep Learning Applications</p>
+        </div>
+    </footer>
+</body>
+</html>
