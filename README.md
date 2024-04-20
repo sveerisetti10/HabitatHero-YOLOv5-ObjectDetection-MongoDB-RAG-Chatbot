@@ -1,7 +1,5 @@
 # HabitatHero
 
-# Endangered Species Identification and Conservation Awareness Project
-
 ## Purpose
 
 This project aims to raise public awareness and foster conservation engagement regarding endangered species, which are often at the risk of extinction due to inadequate understanding and engagement in conservation efforts. Despite the presence of conservation tools, there's a gap in educational resources that provide a comprehensive understanding of the threats these species face and the actions we can take to support their survival. The International Union for Conservation of Nature (IUCN) reports that at least 38,500 species are threatened, with over 16,300 endangered. Our initiative addresses this issue by educating the public about various wildlife animals and ways humans can help ensure their prosperity.
