@@ -10,6 +10,8 @@ The model focuses on the following wildlife animals: antelope, bat, bear, bee, b
 
 The app leverages computer vision to identify and detect these animals, drawing inspiration from influential research in the field, such as “The iNaturalist Species Classification and Detection Dataset” by Grant Van Horn et al.
 
+You can visit the application here: https://flask-habitathero-app-al7e4bbgba-uc.a.run.app
+
 ## Flask App Structure
 
 The Flask application comprises a front-end designed in HTML/CSS & JavaScript, and a Python back-end. Key components include:
