@@ -8,7 +8,7 @@ This project aims to raise public awareness and foster conservation engagement r
 
 The model focuses on the following wildlife animals: antelope, bat, bear, bee, butterfly, Domestic short-haired cats, chimpanzee, coyote, dolphin, eagle, elephant, gorilla, hippopotamus, rhinoceros, hummingbird, kangaroo, koala, leopard, lion, lizard, orangutan, panda, penguin, seal, shark, tiger, turtle, whale, and zebra.
 
-The app leverages computer vision to identify and classify these animals, drawing inspiration from influential research in the field, such as “The iNaturalist Species Classification and Detection Dataset” by Grant Van Horn et al.
+The app leverages computer vision to identify and detect these animals, drawing inspiration from influential research in the field, such as “The iNaturalist Species Classification and Detection Dataset” by Grant Van Horn et al.
 
 ## Flask App Structure
 
