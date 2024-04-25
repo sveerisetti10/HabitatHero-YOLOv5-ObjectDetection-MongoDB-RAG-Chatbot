@@ -12,6 +12,8 @@ The app leverages computer vision to identify and detect these animals, drawing 
 
 You can visit the application here: https://flask-habitathero-app-al7e4bbgba-uc.a.run.app/
 
+To gain a more in-depth understanding of the application please visit my YouTube video for the app at: https://www.youtube.com/watch?v=L7PcrW7J8KY&t=3s
+
 ## Flask App Structure
 
 The Flask application comprises a front-end designed in HTML/CSS & JavaScript, and a Python back-end. Key components include:
